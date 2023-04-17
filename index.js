@@ -9,7 +9,7 @@ const { blogRouter } = require("./routes/blogRoute");
 const app = express();
 
 app.get("/",(req,res)=>{
-    console.log("home")
+    res.send("home")
 })
 
 app.use(express.json())
