@@ -8,6 +8,10 @@ const { blogRouter } = require("./routes/blogRoute");
 
 const app = express();
 
+app.get("/",(req,res)=>{
+    console.log("home")
+})
+
 app.use(express.json())
 app.use("/users",userRouter)
 app.use(authentication)
@@ -15,9 +19,7 @@ app.use("/blogs",blogRouter)
 
 
 
-app.get("/",(req,res)=>{
-    console.log("home")
-})
+
 
 app.listen(port,async()=>{
 try {
